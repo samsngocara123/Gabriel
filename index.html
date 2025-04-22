@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Perguntas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Tela Inicial -->
+    <div id="inicio" class="tela">
+        <h1>Jogo de Perguntas</h1>
+        <button onclick="iniciarJogo()">Iniciar Jogo</button>
+    </div>
+
+    <!-- Tela do Jogo -->
+    <div id="jogo" class="tela" style="display: none;">
+        <h2 id="pergunta">Pergunta</h2>
+        <img id="imagem" src="" alt="Imagem da pergunta">
+        <div class="alternativas">
+            <button onclick="responder(0)">Alternativa 1</button>
+            <button onclick="responder(1)">Alternativa 2</button>
+            <button onclick="responder(2)">Alternativa 3</button>
+        </div>
+        <p id="mensagem"></p>
+        <p class="pontuacao">Pontuação: <span id="pontuacao">0</span></p>
+    </div>
+
+    <!-- Tela Final -->
+    <div id="resultado" class="tela" style="display: none;">
+        <h1>Resultado Final</h1>
+        <p id="resultadoMensagem"></p>
+        <button onclick="reiniciarJogo()">Jogar Novamente</button>
+    </div>
+
+    <script src="javaScript.js"></script>
+</body>
+</html>
